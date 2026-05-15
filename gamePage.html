@@ -1,28 +1,62 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blackjack</title>
     <link rel="stylesheet" href="gameStyle.css">
 </head>
 <body>
-    <!--Conteúdo introdutório-->
-    <header>
-        <h1 class="titulo">Jogo de Memória</h1>
-    </header>
+<main class="table">
+    <h1>Blackjack</h1>
+    <div class="subtitle">Tente A Sua Sorte no BlackJack.</div>
 
-    <!--Navigação (links de navegação)-->
-    <nav>
-        <a href="index.html">Voltar</a>
-    </nav>
+    <section class="session-panel">
+        <div class="session-grid">
+            <div class="metric"><span>Reais</span><strong id="points-display">1000</strong></div>
+            <div class="metric"><span>Valor atual</span><strong id="bet-display">50</strong></div>
+            <div class="metric"><span>Maior Ganho</span><strong id="best-display">1000</strong></div>
+            <div class="metric"><span>Rodada</span><strong id="round-display">0</strong></div>
+        </div>
+        <div class="bet-controls">
+            <button class="bet-btn" id="bet-minus-50">-50</button>
+            <button class="bet-btn" id="bet-minus-10">-10</button>
+            <button class="bet-btn" id="bet-plus-10">+10</button>
+            <button class="bet-btn" id="bet-plus-50">+50</button>
+            <button class="bet-btn" id="bet-max">Max.</button>
+        </div>
+    </section>
 
-    <!--Conteúdo Principal-->
-    <main>
-    </main>
+    <section class="board">
+        <div class="hand-area">
+            <div class="hand-header">
+                <div class="hand-title">Dealer</div>
+                <div class="score" id="dealer-score">Pontuação: ?</div>
+            </div>
+            <div class="cards" id="dealer-cards"></div>
+        </div>
 
-    <!--Rodapé da página-->
-    <footer>
-    </footer>
+        <div class="hand-area">
+            <div class="hand-header">
+                <div class="hand-title">Jogador</div>
+                <div class="score" id="player-state">1 mão</div>
+            </div>
+            <div class="player-hands" id="player-hands"></div>
+        </div>
+    </section>
+
+    <div class="controls">
+        <button class="hit" id="hit-btn">Pedir Carta</button>
+        <button class="stand" id="stand-btn">Não pedir carta</button>
+        <button class="split" id="split-btn">Dividir</button>
+        <button class="deal-round" id="deal-btn">Passar o Round</button>
+        <button class="reset-session" id="reset-btn">Resetar a partida</button>
+    </div>
+
+    <div class="status" id="status">Ajuste a sua mão e tente conseguir mo maximo de dinheiro o possivel</div>
+    <div class="legend">Regras: O Ás pode valer 11 ou 1; Vitórias regulares pagam 1:1, blackjack pagam 3:2, Empates retornam o seu dinheiro, e ao Dividir você coloca uma aposta de mesmo preço.</div>
+</main>
+
+<script src="BlackJack.js"></script>
 </body>
 </html>

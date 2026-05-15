@@ -7,7 +7,7 @@ body {
     margin: 0;
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    background: radial-gradient(circle at top, #ffc42a, #571a03 65%);
+    background: radial-gradient(circle at top, #0f5132, #052e1c 65%);
     color: #ffffff;
     display: flex;
     align-items: center;
@@ -156,7 +156,7 @@ h1 {
 }
 
 .card-back {
-    background: linear-gradient(135deg, #d8a31d, #986d10);
+    background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
     color: #eff6ff;
     align-items: center;
     justify-content: center;
@@ -208,17 +208,17 @@ button:disabled {
 }
 
 .hit {
-    background: #2af50b;
+    background: #f59e0b;
     color: #111827;
 }
 
 .stand {
-    background: #f63b3b;
+    background: #3b82f6;
     color: white;
 }
 
 .split {
-    background: #27bf6e;
+    background: #8b5cf6;
     color: white;
 }
 

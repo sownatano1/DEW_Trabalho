@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blackjack</title>
+  <link rel="stylesheet" href="BlackJack.css">
+</head>
+<body>
+<main class="table">
+  <h1>Blackjack</h1>
+  <div class="subtitle">Tente A Sua Sorte no BlackJack.</div>
+
+  <section class="session-panel">
+    <div class="session-grid">
+      <div class="metric"><span>Reais</span><strong id="points-display">1000</strong></div>
+      <div class="metric"><span>Current Bet</span><strong id="bet-display">50</strong></div>
+      <div class="metric"><span>Best Score</span><strong id="best-display">1000</strong></div>
+      <div class="metric"><span>Round</span><strong id="round-display">0</strong></div>
+    </div>
+    <div class="bet-controls">
+      <button class="bet-btn" id="bet-minus-50">-50</button>
+      <button class="bet-btn" id="bet-minus-10">-10</button>
+      <button class="bet-btn" id="bet-plus-10">+10</button>
+      <button class="bet-btn" id="bet-plus-50">+50</button>
+      <button class="bet-btn" id="bet-max">Max</button>
+    </div>
+  </section>
+
+  <section class="board">
+    <div class="hand-area">
+      <div class="hand-header">
+        <div class="hand-title">Dealer</div>
+        <div class="score" id="dealer-score">Score: ?</div>
+      </div>
+      <div class="cards" id="dealer-cards"></div>
+    </div>
+
+    <div class="hand-area">
+      <div class="hand-header">
+        <div class="hand-title">Player</div>
+        <div class="score" id="player-state">1 hand</div>
+      </div>
+      <div class="player-hands" id="player-hands"></div>
+    </div>
+  </section>
+
+  <div class="controls">
+    <button class="hit" id="hit-btn">Hit</button>
+    <button class="stand" id="stand-btn">Stand</button>
+    <button class="split" id="split-btn">Split</button>
+    <button class="deal-round" id="deal-btn">Deal Round</button>
+    <button class="reset-session" id="reset-btn">Reset Run</button>
+  </div>
+
+  <div class="status" id="status">Adjust your bet and deal a round. Try to reach the highest score possible.</div>
+  <div class="legend">Rules: dealer draws until 17 or more. Aces count as 11 or 1. Regular wins pay 1:1, blackjack pays 3:2, pushes return your bet, and split places an equal second bet.</div>
+</main>
+
+<script src="BlackJack.js"></script>
+</body>
+</html>
